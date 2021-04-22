@@ -52,7 +52,7 @@ class Register : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) {
                     if (it.isSuccessful) {
-                        Intent(this @Register, Homepage::class.java).also {
+                        Intent(this@Register, Homepage::class.java).also {
                             it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                             startActivity(it)
                         }
@@ -60,5 +60,15 @@ class Register : AppCompatActivity() {
                         Toast.makeText(this, it.exception?.message, Toast.LENGTH_SHORT).show()
                     }
                 }
+    }
+
+    override fun onStart() {
+        super.onStart()
+         if (auth.currentUser != null){
+             Intent(this@Register, Homepage::class.java).also {
+                 it.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                 startActivity(it)
+             }
+         }
     }
 }

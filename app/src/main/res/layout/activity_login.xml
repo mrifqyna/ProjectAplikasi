@@ -19,7 +19,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/etUser"
+        android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -27,7 +27,7 @@
         android:background="@drawable/shapeedittext"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="10dp"
-        android:hint="Email atau Username"
+        android:hint="Email"
         android:textColor="#FFF"
         android:textColorHint="#FFF"
         android:textColorHighlight="#FFF" />
@@ -48,7 +48,7 @@
         android:textColorHighlight="#FFF" />
 
     <Button
-        android:id="@+id/btnLogin"
+        android:id="@+id/btnSignin"
         android:layout_width="142dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
